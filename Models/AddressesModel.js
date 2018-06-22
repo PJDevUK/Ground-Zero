@@ -3,7 +3,13 @@ import dataTables from 'mongoose-datatables'
 
 const Schema = mongoose.Schema
 
-// Create Administrator domain model and schema
+/**
+  * @description Addresses Domain Model Mongoose Schema
+  * @param CusID
+  * Refers to the Customer assoiciated with a particular Address.
+  * The Customers document is stored within (Customers Collection) within the database
+  * which can be accessed with the CusID value.
+  */
 const addressesSchema = new Schema({
   AdrsID: { type: Number, min: 11, max: 11, required: true },
   CusID: { type: Number, min: 11, max: 11, required: true },
@@ -18,11 +24,11 @@ const addressesSchema = new Schema({
   Post_Zip_Code: { type: String, max: 8, required: true }
 })
 
-// Allows Datatables to read Admin data correctly
+// Allows Datatables to access Addresses data
 addressesSchema.plugin(dataTables)
 
-// Create the Mongoose model with adminsSchema
-const Addresses = mongoose.model('Addresses', addressesSchema)
+// Creates the Mongoose model
+const Addresses = mongoose.model('AddressesModel', addressesSchema)
 
 // This exports the model.
 export default Addresses
