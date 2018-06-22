@@ -8,7 +8,7 @@ import path from 'path'
 
 var app = express()
 
-app.use('/shiftninja', express.static(path.join(__dirname, 'public')));
+app.use('/shiftninja', express.static(path.join(__dirname, 'public')))
 
 app.engine('html', es6Renderer)
 
@@ -32,7 +32,7 @@ app.use(referrerPolicy({ policy: 'origin-when-cross-origin' }))
 var chooseEnviroment = ['development', 'local', 'deploy', 'test']
 var useEnv = chooseEnviroment[0]
 process.env.NODE_ENV = useEnv
-let me = "sick"
+let me = 'sick'
 console.log(me)
 /**
  * Middleware which handles errors on the rejection of a promise
@@ -61,7 +61,6 @@ app.listen(port, function () {
   console.log('>>>> Listening on Port ' + port)
 })
 
-
 /**
  * GOOGLE FOLLOWING
  * Express Session Middleware(require('express-session')
@@ -73,7 +72,7 @@ app.listen(port, function () {
     secret: 'keyboard cat',
     resave: true,
     saveUninitialized: true
-  })); 
+  }));
 */
 
 // Allows Express access to recruits.js for HTTP verb functions.
