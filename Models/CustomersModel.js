@@ -5,13 +5,14 @@ import Email from '../Controllers/emailValidator'
 const Schema = mongoose.Schema
 
 /**
-  * @description Create Administrator domain model and schema
+  * @description Customers Domain Model Mongoose Schema
   * @param Email
   * Class which is located in emailValidator.js within the Controllers Folder
   * this class ensures only true emails are stored to the database.
   * @param Invoice_AdrsID
   * Refers to an Address document stored within (Addresses Collection) within the database
-  * which has been choosen as the customers default mailling for Invoicing.
+  * which has been choosen as the customers default mailing address for
+  * invoicing and purchasing purposes.
   */
 const customersSchema = new Schema({
   CusID: { type: Number, min: 11, max: 11, required: true },
@@ -29,16 +30,11 @@ const customersSchema = new Schema({
   Invoice_AdrsID: { type: Number, min: 11, max: 11, required: true }
 })
 
-/**
-* THIS PLUGIN IS PRE-EMPTIVE
-* Delete plugin and import if unused
-* This should be done before deployment to avoid package deprication
-* conflicts
-*/
+// Allows Datatables to access Customers data
 customersSchema.plugin(dataTables)
 
-// Create the Mongoose model with adminsSchema
-const Customers = mongoose.model('Addresses', customersSchema)
+// Creates the Mongoose model
+const Customers = mongoose.model('CustomersModel', customersSchema)
 
 // This exports the model.
 export default Customers
