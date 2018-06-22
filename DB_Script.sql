@@ -16,7 +16,6 @@ CREATE TABLE `Customers` (
     `Company_Name` VARCHAR(50),
     `Title` VARCHAR(10) NOT NULL,
     `First_Name` VARCHAR(25) NOT NULL,
-    `Middle_Name` VARCHAR(25),
     `Surname` VARCHAR(25) NOT NULL,
     `Mobile_Contact` INTEGER(15),
     `Landline_Contact` INTEGER(15),
