@@ -3,11 +3,21 @@ import dataTables from 'mongoose-datatables'
 
 const Schema = mongoose.Schema
 
-// Create Administrator domain model and schema
+/**
+  * @description Bookings Domain Model Mongoose Schema
+  * @param CusID
+  * Refers to the Customer assoiciated with this booking.
+  * The Customers document is stored within (Customers Collection) within the database
+  * which can be accessed with the CusID value.
+  * @param HauliersID
+  * Refers to the Haulier assoiciated with this booking.
+  * The Hauliers document is stored within (Hauliers Collection) within the database
+  * which can be accessed with with the HauliersID value.
+  */
 const bookingsSchema = new Schema({
   BookingID: { type: Number, min: 11, max: 11, required: true },
   CusID: { type: Number, min: 11, max: 11, required: true },
-  Haulier_ID: { type: Number, min: 11, max: 11, required: true },
+  HaulierID: { type: Number, min: 11, max: 11, required: true },
   Handler_Name: { type: String, max: 20, required: true },
   Haulier_Internal_Ref: { type: String, max: 30 },
   Customers_Handler_Name: { type: String, max: 20 },
@@ -31,10 +41,10 @@ const bookingsSchema = new Schema({
   Driver_Instructions: { type: String, max: 200 }
 })
 
-// Allows Datatables to read Admin data correctly
+// Allows Datatables to access Bookings data
 bookingsSchema.plugin(dataTables)
 
-// Create the Mongoose model with adminsSchema
+// Creates the Mongoose model
 const Bookings = mongoose.model('BookingsModel', bookingsSchema)
 
 // This exports the model.

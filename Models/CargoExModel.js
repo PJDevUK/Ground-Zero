@@ -4,21 +4,29 @@ import Email from '../Controllers/emailValidator'
 
 const Schema = mongoose.Schema
 
+/**
+  * @description Cargo Exchange domain model and Mongoose Schema
+  * @param Email
+  * Class which is located in emailValidator.js within the Controllers Folder
+  * this class ensures only true emails are stored to the database.
+  * @param Company_AdrsID
+  * Refers to an Address document stored within (Addresses Collection) within the database
+  * which has been choosen as the default company address.
+  */
 const cargoExSchema = new Schema({
   CompanyID: { type: Number, max: 11, min: 11, required: true },
   Company_Name: { type: String, max: 25, required: true },
-  Addresses_Adrs_ID: { type: Number, max: 11, required: true },
+  Company_AdrsID: { type: Number, max: 11, required: true },
   Registration_Num: { type: Number, max: 15, required: true },
   Contact_Num: { type: Number, max: 14, min: 11, required: true },
   Contact_Email: { type: Email, required: true },
   Vat_Num: { type: String, max: 25, required: true }
 })
 
-// Allows Datatables to read Admin data correctly
+// Allows Datatables to access cargoEx data
 cargoExSchema.plugin(dataTables)
 
-// Create the Mongoose model with adminsSchema
+// Creates the Mongoose model
 const CargoEx = mongoose.model('CargoExModel', cargoExSchema)
 
-// This exports the model.
 export default CargoEx
