@@ -22,7 +22,7 @@ const addressesSchema = new Schema({
 addressesSchema.plugin(dataTables)
 
 // Create the Mongoose model with adminsSchema
-const Addresses = mongoose.model('Addresses', addressesSchema)
+const Addresses = mongoose.model('AddressesModel', addressesSchema)
 
 // This exports the model.
 export default Addresses
