@@ -1,4 +1,3 @@
-
 import express from 'express'
 import referrerPolicy from 'referrer-policy'
 import cors from 'cors'
