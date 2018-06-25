@@ -6,8 +6,8 @@ const Schema = mongoose.Schema
 /**
   * @description Hauliers Domain Model Mongoose Schema
   * @param invoiceStatus
-  * Array of Numbers 0-3. Represents Invoices status.
-  * e.g 0= Waiting Payment, 1= Payment Overdue, 2= Paid, 3= Other
+  * Numbers 0-5. Represents Invoices status.
+  * 0= Sent, 1= Waiting Payment, 2= Payment Overdue, 3= Paid, 4= Other, 5= Error Sending,
   * @param AdrsID
   * Refers to an Address document stored in (Addresses Collection) within the database
   * which has been choosen as the Hauliers mailing address for administrative purposes.
@@ -67,7 +67,7 @@ const invoicesSchema = new Schema({
   adminFee: { type: Number, required: true },
   totRate: { type: Number, required: true },
   paymentTerms: { type: String, max: 70 },
-  invoiceStatus: { type: String },
+  invoiceStatus: { type: Number },
   archiveSchedule: { type: Date },
   totNetValue: { type: Number, required: true },
   dateCreated: { type: Date, default: Date.now, required: true }
@@ -77,7 +77,7 @@ const invoicesSchema = new Schema({
 invoicesSchema.plugin(dataTables)
 
 // Creates the Mongoose model
-const Invoices = mongoose.model('HauliersModel', invoicesSchema)
+const Invoices = mongoose.model('InvoicesModel', invoicesSchema)
 
 // This exports the model.
 export default Invoices
