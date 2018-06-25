@@ -85,8 +85,7 @@ CREATE TABLE `Invoices` (
     `Payment_Terms` VARCHAR(70),
     `Booking_Ref` INTEGER NOT NULL,
     `Tot_Net_Value` INTEGER NOT NULL,
-    PRIMARY KEY (`Invoice_ID`),
-    UNIQUE (`Invoice_ID`)
+   
 );
 
 CREATE TABLE `Addresses` (

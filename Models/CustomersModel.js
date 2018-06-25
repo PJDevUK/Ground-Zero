@@ -15,19 +15,19 @@ const Schema = mongoose.Schema
   * invoicing and purchasing purposes.
   */
 const customersSchema = new Schema({
-  CusID: { type: Number, min: 11, max: 11, required: true },
-  Company_Name: { type: String, max: 50 },
-  Title: { type: String, max: 10, required: true },
-  First_Name: { type: String, max: 25, required: true },
-  Surname: { type: String, max: 25, required: true },
-  Mobile_Contact: { type: Number, max: 15 },
-  Landline_Contact: { type: Number, max: 15 },
-  Email: { type: Email, required: true },
-  Login_Password: { type: String, max: 15, required: true },
-  Post_Zip_Code: { type: String, max: 8, required: true },
-  Mobile_Notifications: { type: String, max: 8, required: true },
-  Date_Created: { type: String, max: 8, required: true },
-  Invoice_AdrsID: { type: Number, min: 11, max: 11, required: true }
+  cusID: { type: Number, min: 11, max: 11, required: true },
+  companyName: { type: String, max: 50 },
+  title: { type: String, max: 10, required: true },
+  firstName: { type: String, max: 25, required: true },
+  surname: { type: String, max: 25, required: true },
+  mobileContact: { type: Number, max: 15 },
+  landlineContact: { type: Number, max: 15 },
+  email: { type: Email, required: true },
+  loginPassword: { type: String, max: 15, required: true },
+  postZipCode: { type: String, max: 8, required: true },
+  mobileNotifications: { type: String, max: 8, required: true },
+  dateCreated: { type: String, max: 8, required: true },
+  invoiceAdrsID: { type: Number, min: 15, max: 15, required: true }
 })
 
 // Allows Datatables to access Customers data
