@@ -8,6 +8,7 @@ const Schema = mongoose.Schema
   *
   */
 const enquiriesSchema = new Schema({
+
   enquiryID: { type: Number, min: 11, max: 11, required: true },
   cusID: { type: Number, min: 11, max: 11, required: true },
   cusHandlersName: { type: String, max: 20 },
