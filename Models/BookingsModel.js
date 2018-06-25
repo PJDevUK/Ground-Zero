@@ -43,6 +43,9 @@ const bookingsSchema = new Schema({
   collectionRef: { type: String, max: 25 },
   collectionContact: { type: String, max: 70 },
   collectionDate: { type: Date, required: true },
+  collectionInstructions: { type: String, max: 200 },
+  /*
+  MAY NOT BE REQUIRED HERE
   collectionAdrseeName: { type: String, max: 30, required: true },
   collectionAdrsLine_1: { type: String, max: 40 },
   collectionAdrsLine_2: { type: String, max: 40 },
@@ -51,12 +54,14 @@ const bookingsSchema = new Schema({
   collectionCityTown: { type: String, max: 15, required: true },
   collectionCountyState: { type: String, max: 15, required: true },
   collectionCountry: { type: String, max: 15, required: true },
-  collectionPostZipCode: { type: String, max: 8, required: true },
-  collectionInstructions: { type: String, max: 200 },
+  collectionPostZipCode: { type: String, max: 8, required: true }, */
 
   deliveryRef: { type: String, max: 25 },
   deliveryContact: { type: String, max: 70 },
   deliveryDate: { type: Date, required: true },
+  deliveryInstructions: { type: String, max: 200 },
+  /*
+  MAY NOT BE REQUIRED HERE
   deliveryAdrseeName: { type: String, max: 30, required: true },
   deliveryAdrsLine_1: { type: String, max: 40 },
   deliveryAdrsLine_2: { type: String, max: 40 },
@@ -65,8 +70,7 @@ const bookingsSchema = new Schema({
   deliveryCityTown: { type: String, max: 15, required: true },
   deliveryCountyState: { type: String, max: 15, required: true },
   deliveryCountry: { type: String, max: 15, required: true },
-  deliveryPostZipCode: { type: String, max: 8, required: true },
-  deliveryInstructions: { type: String, max: 200 },
+  deliveryPostZipCode: { type: String, max: 8, required: true }, */
 
   quotedRate: { type: Number, required: true },
   dateCreated: { type: Date, default: Date.now, required: true },
