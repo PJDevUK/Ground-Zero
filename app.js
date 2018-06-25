@@ -8,12 +8,12 @@ import path from 'path'
 
 var app = express()
 
-app.use('/shiftninja', express.static(path.join(__dirname, 'public')))
+app.use('/', express.static(path.join(__dirname, 'Public')))
 
 app.engine('html', es6Renderer)
 
 // App access to views folder
-app.set('views', './views')
+app.set('views', './Views')
 
 app.set('view engine', 'html')
 

@@ -11,12 +11,12 @@ const Schema = mongoose.Schema
   * which has been choosen as the Hauliers mailing address for administrative purposes.
   */
 const hauliersSchema = new Schema({
-  HaulierID: { type: Number, min: 11, max: 11, required: true },
-  AdrsID: { type: Number, min: 11, max: 11 },
-  Company_Name: { type: String, max: 50, required: true },
-  Email: { type: Email, required: true },
-  Contact_Landline: { type: Number, max: 13 },
-  Date_Created: { type: Date, default: Date.now }
+  haulierID: { type: Number, min: 11, max: 11, required: true },
+  adrsID: { type: Number, min: 11, max: 11 },
+  companyName: { type: String, max: 50, required: true },
+  email: { type: Email, required: true },
+  contactLandline: { type: Number, max: 13 },
+  dateCreated: { type: Date, default: Date.now }
 })
 
 // Allows Datatables to access Addresses data

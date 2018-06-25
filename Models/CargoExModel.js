@@ -14,13 +14,13 @@ const Schema = mongoose.Schema
   * which has been choosen as the default company address.
   */
 const cargoExSchema = new Schema({
-  CompanyID: { type: Number, max: 11, min: 11, required: true },
-  Company_Name: { type: String, max: 25, required: true },
-  Company_AdrsID: { type: Number, max: 11, required: true },
-  Registration_Num: { type: Number, max: 15, required: true },
-  Contact_Num: { type: Number, max: 14, min: 11, required: true },
-  Contact_Email: { type: Email, required: true },
-  Vat_Num: { type: String, max: 25, required: true }
+  companyID: { type: Number, max: 11, min: 11, required: true },
+  companyName: { type: String, max: 25, required: true },
+  companyAdrsID: { type: Number, min: 15, max: 15, required: true },
+  registrationNum: { type: Number, max: 15, required: true },
+  contactNum: { type: Number, max: 14, min: 11, required: true },
+  contactEmail: { type: Email, required: true },
+  vatNum: { type: String, max: 25, required: true }
 })
 
 // Allows Datatables to access cargoEx data

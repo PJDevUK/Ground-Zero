@@ -11,17 +11,17 @@ const Schema = mongoose.Schema
   * which can be accessed with the CusID value.
   */
 const addressesSchema = new Schema({
-  AdrsID: { type: Number, min: 11, max: 11, required: true },
+  AdrsID: { type: Number, min: 15, max: 15, required: true },
   CusID: { type: Number, min: 11, max: 11, required: true },
-  Addressee_Full_Name: { type: String, max: 30, required: true },
-  Address_Line_1: { type: String, max: 40 },
-  Address_Line_2: { type: String, max: 40 },
-  Address_Line_3: { type: String, max: 40 },
-  Address_Line_4: { type: String, max: 40 },
-  City_Town: { type: String, max: 15, required: true },
-  County_State: { type: String, max: 15, required: true },
+  AdrsFullName: { type: String, max: 30, required: true },
+  AdrsLine_1: { type: String, max: 40 },
+  AdrsLine_2: { type: String, max: 40 },
+  AdrsLine_3: { type: String, max: 40 },
+  AdrsLine_4: { type: String, max: 40 },
+  CityTown: { type: String, max: 15, required: true },
+  CountyState: { type: String, max: 15, required: true },
   Country: { type: String, max: 15, required: true },
-  Post_Zip_Code: { type: String, max: 8, required: true }
+  PostZipCode: { type: String, max: 8, required: true }
 })
 
 // Allows Datatables to access Addresses data
