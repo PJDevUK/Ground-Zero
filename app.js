@@ -8,7 +8,7 @@ import path from 'path'
 import db from 'mongoose'
 import config from './config'
 import router from './routers/customers'
-import injectCustData from './controllers/testDataInjector'
+// import injectCustData from './controllers/testDataInjector'
 import Customers from './models/CustomersModel'
 
 var app = express()
