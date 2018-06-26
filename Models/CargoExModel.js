@@ -14,6 +14,7 @@ const Schema = mongoose.Schema
   * which has been choosen as the default company address.
   */
 const cargoExSchema = new Schema({
+
   companyID: { type: Number, max: 11, min: 11, required: true },
   companyName: { type: String, max: 25, required: true },
   companyAdrsID: { type: Number, min: 15, max: 15, required: true },

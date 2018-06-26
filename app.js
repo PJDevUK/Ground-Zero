@@ -1,12 +1,19 @@
+import 'babel-polyfill'
 import express from 'express'
 import referrerPolicy from 'referrer-policy'
 import cors from 'cors'
 import es6Renderer from 'express-es6-template-engine'
 import bodyParser from 'body-parser'
 import path from 'path'
+import db from 'mongoose'
+import config from './config'
+import router from './routers/customers'
+import injectCustData from './controllers/testDataInjector'
+import Customers from './models/CustomersModel'
 
 var app = express()
 
+app.use('/', router)
 app.use('/', express.static(path.join(__dirname, 'Public')))
 
 app.engine('html', es6Renderer)
@@ -28,53 +35,56 @@ app.use(bodyParser.urlencoded({ extended: true }))
 // Governs which referrer information is sent in the Referrer header.
 app.use(referrerPolicy({ policy: 'origin-when-cross-origin' }))
 
-var chooseEnviroment = ['development', 'local', 'deploy', 'test']
-var useEnv = chooseEnviroment[0]
-process.env.NODE_ENV = useEnv
-let me = 'sick'
-console.log(me)
 /**
  * Middleware which handles errors on the rejection of a promise
  * @param err this is the error message
  * @param req this is what was requested from the client
  * @param res is the response given back to client
  */
-app.use(function (err, req, res, next) {
+app.use(function (err, req, res) {
   res.header('Content-Security-Policy', "default-src 'self'; script-src 'self' 'https://apis.google.com'; Referrer-Policy 'origin-when-cross-origin';object-src 'none';img-src 'self' 'https:' 'data:';media-src 'self';frame-src 'https://www.google.co.uk/maps/';font-src 'self' 'https://www.w3.org/';connect-src 'self';style-src 'self' 'https://fonts.googleapis.com/';")
   res.header('Access-Control-Allow-Origin', '*')
   res.header('Access-Control-Allow-Methods', 'DELETE, PUT, GET, POST')
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
+
   res.locals.messages = require('express-messages')(req, res)
   res.status(422).send({ error: err.message })
   res.tatus(200).send({ error: err.message })
 
-  // Returns the error in String form to the console for debugging
   console.log(err, req, res)
 })
+
+const chooseEnviroment = ['development', 'local', 'deploy', 'test']
+var useEnv = chooseEnviroment[1]
+process.env.NODE_ENV = useEnv
+
+// Connection to DB server depending on enviroment
+
+try {
+  db.connect(config.configURL(useEnv), function (error) {
+    if (error) {
+      console.log('DB CONNECTION ISSUE')
+      console.log(error)
+    } else {
+      console.log('Connected to DB\nEnviroment => ' + useEnv)
+      Customers.find({}, function (error, customersExist) {
+        if (error) {
+          console.log(error)
+        }
+        if (!customersExist.length) {
+          // injectCustData.injectCustomer()
+        }
+      })
+    }
+  })
+} catch (error) {
+  console.log('Check Internet Connection')
+}
 
 // Set Port
 let port = process.env.PORT || 3000
 
 // Request Listener
 app.listen(port, function () {
-  console.log('>>>> Listening on Port ' + port)
+  console.log('Listening on Port ' + port)
 })
-
-/**
- * GOOGLE FOLLOWING
- * Express Session Middleware(require('express-session')
- * ES^ Node
- */
-
-// Express Session Middleware
-/* expressApp.use(require('express-session')({
-    secret: 'keyboard cat',
-    resave: true,
-    saveUninitialized: true
-  }));
-*/
-
-// Allows Express access to recruits.js for HTTP verb functions.
-// app.use('/shiftninja', require('./routers/recruits'));
-// Ensures public folder is staic and available for assets on clientside
-// app.use('/shiftninja', join(__dirname, 'public'));

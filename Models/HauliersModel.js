@@ -11,11 +11,12 @@ const Schema = mongoose.Schema
   * which has been choosen as the Hauliers mailing address for administrative purposes.
   */
 const hauliersSchema = new Schema({
+
   haulierID: { type: Number, min: 11, max: 11, required: true },
   adrsID: { type: Number, min: 11, max: 11 },
   companyName: { type: String, max: 50, required: true },
   email: { type: Email, required: true },
-  contactLandline: { type: Number, max: 13 },
+  contactLandline: { type: Number },
   dateCreated: { type: Date, default: Date.now }
 })
 

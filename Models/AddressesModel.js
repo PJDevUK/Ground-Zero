@@ -11,6 +11,7 @@ const Schema = mongoose.Schema
   * which can be accessed with the CusID value.
   */
 const addressesSchema = new Schema({
+
   AdrsID: { type: Number, min: 15, max: 15, required: true },
   CusID: { type: Number, min: 11, max: 11, required: true },
   AdrsFullName: { type: String, max: 30, required: true },
