@@ -73,8 +73,10 @@ const bookingsSchema = new Schema({
   deliveryPostZipCode: { type: String, max: 8, required: true }, */
 
   quotedRate: { type: Number, required: true },
-  dateCreated: { type: Date, default: Date.now, required: true },
   customerInvoiced: { type: Boolean, required: true, default: false }
+
+}, {
+  timestamps: { timestamps: true }
 })
 
 // Allows Datatables to access Bookings data

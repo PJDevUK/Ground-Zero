@@ -2,6 +2,7 @@ import Customers from '../models/CustomersModel'
 
 function injectCustomer () {
   // This populates an empty DB with Admins if non exist.
+  console.log('INJECTING NEW CUSTOMER')
   Customers.find({}, function (err, customersExist) {
     if (err) {
       console.log(err)

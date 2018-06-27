@@ -27,10 +27,10 @@ const customersSchema = new Schema({
   email: { type: Email, required: true },
   loginPassword: { type: String, required: true },
   postZipCode: { type: String, required: true },
-  mobileNotifications: { type: String, required: true },
-  dateCreated: { type: String, required: true },
-  timestamps: { createdAt: 'created_at' }
+  mobileNotifications: { type: String, required: true }
 
+}, {
+  timestamps: { timestamps: true }
 })
 
 // Allows Datatables to access Customers data

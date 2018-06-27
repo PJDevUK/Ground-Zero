@@ -21,6 +21,8 @@ const quotesSchema = new Schema({
   haulierHandlersName: { type: String, max: 20, required: true },
   quotedRate: { type: Number, required: true }
 
+}, {
+  timestamps: { timestamps: true }
 })
 
 // Allows Datatables to accessQuotes data

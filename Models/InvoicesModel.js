@@ -69,8 +69,10 @@ const invoicesSchema = new Schema({
   paymentTerms: { type: String, max: 70 },
   invoiceStatus: { type: Number },
   archiveSchedule: { type: Date },
-  totNetValue: { type: Number, required: true },
-  dateCreated: { type: Date, default: Date.now, required: true }
+  totNetValue: { type: Number, required: true }
+
+}, {
+  timestamps: { timestamps: true }
 })
 
 // Allows Datatables to access Addresses data

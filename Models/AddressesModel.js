@@ -23,6 +23,9 @@ const addressesSchema = new Schema({
   CountyState: { type: String, max: 15, required: true },
   Country: { type: String, max: 15, required: true },
   PostZipCode: { type: String, max: 8, required: true }
+
+}, {
+  timestamps: { timestamps: true }
 })
 
 // Allows Datatables to access Addresses data
