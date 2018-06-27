@@ -10,6 +10,7 @@ import config from './config'
 import router from './routers/customers'
 import injectCustData from './controllers/testDataInjector'
 import Customers from './models/CustomersModel'
+import Bookings from './models/BookingsModel'
 
 var app = express()
 
@@ -67,12 +68,22 @@ try {
       console.log(error)
     } else {
       console.log('Connected to DB\nEnviroment => ' + useEnv)
+
       Customers.find({}, function (error, customersExist) {
         if (error) {
           console.log(error)
         }
         if (!customersExist.length) {
           injectCustData.injectCustomer()
+        }
+      })
+
+      Bookings.find({}, function (error, bookingsExist) {
+        if (error) {
+          console.log(error)
+        }
+        if (!bookingsExist.length) {
+          injectCustData.injectBooking()
         }
       })
     }

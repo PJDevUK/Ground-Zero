@@ -70,12 +70,12 @@ function injectBooking () {
 
         collectionRef: 'collectRefHere',
         collectionContact: 'Speak to Johnny Johnson',
-        collectionDate: Date.now,
+        collectionDate: Date.now(),
         collectionInstructions: 'Dont leave without manifest',
 
         deliveryRef: 'deliveryRefHere',
         deliveryContact: 'Speak to Nathen on Delivery',
-        deliveryDate: Date.now,
+        deliveryDate: Date.now(),
         deliveryInstructions: 'Theres a low bridge near depot route down A123 to avoid',
 
         quotedRate: 780,
