@@ -15,9 +15,9 @@ const Schema = mongoose.Schema
   */
 const cargoExSchema = new Schema({
 
-  companyID: { type: Number, max: 11, min: 11, required: true },
+  companyID: { type: Number, min: 10000000000, max: 99999999999, required: true },
   companyName: { type: String, max: 25, required: true },
-  companyAdrsID: { type: Number, min: 15, max: 15, required: true },
+  companyAdrsID: { type: Number, min: 10000000000, max: 99999999999, required: true },
   registrationNum: { type: Number, max: 15, required: true },
   contactNum: { type: Number, max: 14, min: 11, required: true },
   contactEmail: { type: Email, required: true },

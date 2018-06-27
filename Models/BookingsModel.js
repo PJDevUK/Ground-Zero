@@ -22,11 +22,11 @@ const Schema = mongoose.Schema
   */
 const bookingsSchema = new Schema({
 
-  bookingID: { type: Number, min: 11, max: 11, required: true },
-  cusID: { type: Number, min: 11, max: 11, required: true },
-  haulierID: { type: Number, min: 11, max: 11, required: true },
-  quoteID: { type: Number, min: 11, max: 11, required: true },
-  enquiryID: { type: Number, min: 11, max: 11, required: true },
+  bookingID: { type: Number, min: 10000000000, max: 99999999999, required: true },
+  cusID: { type: Number, min: 10000000000, max: 99999999999, required: true },
+  haulierID: { type: Number, min: 10000000000, max: 99999999999, required: true },
+  quoteID: { type: Number, min: 10000000000, max: 99999999999, required: true },
+  enquiryID: { type: Number, min: 10000000000, max: 99999999999, required: true },
 
   haulierInternalRef: { type: String, max: 30 },
   handlerName: { type: String, max: 20, required: true },
