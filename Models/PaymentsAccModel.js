@@ -14,7 +14,7 @@ const paymentAccountSchema = new Schema({
   BIC: { type: String, max: 15, required: true },
   IBAN: { type: String, max: 30, required: true },
   sortCode: { type: Number, max: 999999, min: 9999, required: true },
-  accountNumber: { type: Number, max: 11, min: 11, required: true }
+  accountNumber: { type: Number, max: 99999999999, required: true }
 
 }, {
   timestamps: { timestamps: true }

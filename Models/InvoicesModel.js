@@ -40,10 +40,10 @@ const invoicesSchema = new Schema({
   cusID: { type: Number, min: 10000000000, max: 99999999999, required: true },
   quoteID: { type: Number, min: 10000000000, max: 99999999999, required: true },
 
-  hauliersOwnRef: { type: String, max: 30, required: true },
+  haulierInternalRef: { type: String, max: 30, required: true },
   hauliersHandlersName: { type: String, max: 20, required: true },
-  cusOwnRef: { type: String, max: 30 },
-  cusHandlersName: { type: String, max: 20 },
+  cusInternalRef: { type: String, max: 30 },
+  customersHandlerName: { type: String, max: 20 },
 
   trialerType: { type: String, max: 10, required: true },
   grossWeightKg: { type: Number, required: true },
@@ -52,11 +52,13 @@ const invoicesSchema = new Schema({
   tailLiftDelivery: { type: Boolean, default: false },
   additionalNotes: { type: String, max: 500 },
 
+  collectionRef: { type: String, max: 30 },
   collectionDate: { type: Date },
   collectAdrsID: { type: Number, min: 10000000000, max: 99999999999, required: true },
   collectionContact: { type: String, max: 70 },
   collectionInstructions: { type: String, max: 200 },
 
+  deliveryRef: { type: String, max: 30 },
   deliveryDate: { type: Date },
   deliveryAdrsID: { type: Number, min: 10000000000, max: 99999999999, required: true },
   deliveryContact: { type: String, max: 70 },

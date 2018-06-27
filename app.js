@@ -8,8 +8,7 @@ import path from 'path'
 import db from 'mongoose'
 import config from './config'
 import router from './routers/customers'
-import injectCustData from './controllers/testDataInjector'
-import Customers from './models/CustomersModel'
+import populateEmptyDB from './controllers/testDataInjector'
 
 var app = express()
 
@@ -67,14 +66,7 @@ try {
       console.log(error)
     } else {
       console.log('Connected to DB\nEnviroment => ' + useEnv)
-      Customers.find({}, function (error, customersExist) {
-        if (error) {
-          console.log(error)
-        }
-        if (!customersExist.length) {
-          injectCustData.injectCustomer()
-        }
-      })
+      populateEmptyDB()
     }
   })
 } catch (error) {

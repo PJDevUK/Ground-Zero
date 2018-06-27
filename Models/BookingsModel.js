@@ -29,7 +29,7 @@ const bookingsSchema = new Schema({
   enquiryID: { type: Number, min: 10000000000, max: 99999999999, required: true },
 
   haulierInternalRef: { type: String, max: 30 },
-  handlerName: { type: String, max: 20, required: true },
+  hauliersHandlersName: { type: String, max: 20, required: true },
   customersHandlerName: { type: String, max: 20 },
   cusInternalRef: { type: String, max: 30 },
 
