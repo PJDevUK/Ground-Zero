@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Phrexi</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="https://a0.muscache.com/airbnb/static/packages/dls/magic_carpet_cereal-b820980249f05384158cc5efe28cbb2f.css"
+        media="screen" rel="stylesheet" type="text/css" />
+    <link href="https://a0.muscache.com/airbnb/static/magic_carpet/magic_doorway_transitions-028cdabbb4ac228ec511067eb73f16d6.css"
+        media="screen" rel="stylesheet" type="text/css" />
+    <style>
+        .product-holder {
+            position: relative;
+            display: block;
+        }
+
+        .plus-image {
+            left: 3%;
+            top: 10%;
+            position: absolute;
+            margin-top: -25px;
+            margin-left: -25px;
+        }
+
+        .plus-image2 {
+            left: 4%;
+            top: 18%;
+            position: absolute;
+            margin-top: 0%;
+            margin-left: 0%;
+        }
+
+        .plus-rounded-rectangle {
+            right: 1%;
+            left: 20%;
+            top: 20%;
+            position: absolute;
+            margin-right: 0%;
+        }
+
+        .spacer5 {
+            height: 5px;
+        }
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="img-responsive text-center" style="background-color:none; margin-top:0px;">
+                <div class='product-holder'>
+                    <img src="images/roadfreight_darkened2.png" width="100%" class='product-image'>
+                    <img src="images/phrexi-symbol-white.png" width="5%" class='plus-image'>
+                    <img src="images/phrexi-name.png" width="15%" class='plus-image2'>
+                    <img src="images/rounded_rectangle.png" width="80%" class='plus-rounded-rectangle'>
+                </div>
+            </div>
+        </div>
+        <!-- 
+<img src="images/roadfreight darkened.png" width="100%" class="img-responsive" /><img src="images/phrexi symbol white.png" width="43" height="41" alt=""/>
+	 -->
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+
+                <body class="HeaderMeW">
+                    <p>
+                        <h1 class="Display-1">Roadfreight enquiry</h1>
+                    </p>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button" data-toggle="dropdown">What type of vehicle do you need?
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li href="#">13.6m flatbed</li>
+                            <li href="#">13.6m Euroliner</li>
+                            <li href="#">13.6m Tautliner</li>
+                            <li href="#">13.6m Semi low loader</li>
+                            <li href="#">13.6m Megatrailer</li>
+                            <li href="#">13.6m Refridgerated Trailer</li>
+                            <li href="#">Road Train</li>
+                        </ul>
+                    </div>
+                    <!--
+<p>
+  <div class="comments">(We should have a 'help' button or something so people can click on the trailer type and it shows them the standard trailer sizes)
+  </div>
+</p>
+-->
+                    <p></p>
+                    <div class="spacer5"> </div>
+                    <p></p>
+                    <form class="form-horizontal" action="/action_page.php">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="Collection">From:</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="Origin" placeholder="Enter Collection Point" name="Origin">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="Delivery">To:</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="Destination" placeholder="Enter Delivery Point" name="Destination">
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                            <label class="control-label col-sm-2" for="trailers">How many trailers do you require?</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" id="sel1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                            <p></p>
+                            <!--
+<div class="form-control">
+  	<label for="TypeOfPackage">What type of packages do you want to ship?</label>
+  	<input type="text" class="form-control form-control-inline-large" placeholder="Package type">
+  	
+  </div>
+  <p></p>
+
+  <div class="controls">
+    <label for="Length">Length: </label>
+    <input class="form-control form-control-inline" id="Length" type="number" placeholder="(cm)">
+
+    <label for="Width">Width: </label>
+    <input class="form-control form-control-inline" id="Width" type="number" placeholder="(cm)">
+
+    <label for="Height">Height: </label>
+    <input class="form-control form-control-inline" id="Height" type="number" placeholder="(cm)">
+ 
+  	<label for="Weight">Weight: </label>
+  	<input class="form-control form-control-inline" id="Weight" type="number" placeholder="(cm)">
+  </div>
+  -->
+
+                            <!--<div class="comments">
+  		(We need to add a way for multiple trailer types to be selected.)
+  	</div> -->
+                            <br>
+                            <br>
+
+                            <h3>Special Requirements</h3>
+                            <form action="">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" name="Hazardous" value="Hazardous">My cargo is hazardous</label>
+                                <!--
+  <div class="comments">
+		(This should then show a dropdown asking for Haz Class, UN number and packing group. Ideally an upload for the MSDS could be added here which would email the full MSDS to the haulier)
+  </div> -->
+                                <!--
+</p>
+<input type="checkbox" name="Stackable" value="Stackable">My cargo cannot be stacked 
+</form>
+-->
+
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" name="TailLiftCollection" value="TailLiftCollection">I need a tail lift for collection</label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" name="TailLiftDelivery" value="TailLiftDelivery">I need a tail lift for delivery</label>
+                                <br>
+
+                                <!-- Use the below code to add another text box:
+<div class="form-control">
+  	<label for="TypeOfPackage">What type of packages do you want to ship?</label>
+  	<input type="text" class="form-control form-control-inline-large" placeholder="Package type">
+  	
+  </div> -->
+                                <div class="spacer5"> </div>
+
+                                <br>
+
+                                <form class="form-horizontal">
+                                    <label for="date">Do you have a date for when you want the cargo collecting?</label>
+                                    <input class="date-input-native" id="date" type="date" name="date" min="2016-11-03" max="2027-02-11">
+                                    <!-- <input class="date-input-fallback" id="alt" type="text" placeholder="Pick A Date"> -->
+                                    <div id="picker" hidden></div>
+                                    <div class="Spacer5"></div>
+                                    <br>
+                                    <form class="form-horizontal">
+                                        <label for="PriceOnly">Or do you just need a price for now for quotation purposes?</label>
+                                        <input type="checkbox" class="form-inline" name="PriceOnly" value="PriceOnly">
+                                    </form>
+                                    <br>
+                                    <div class="Spacer5"></div>
+                                    <form class="form-horizontal">
+                                        <label for="Bid">Do you want to add a budget and auto-book the cheapest price under your budget?</label>
+                                        <input type="checkbox" class="form-inline" name="bid" value="Bid">
+                                    </form>
+                                    <br>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-2" for="BidPrice">Maximum Budget Cost:</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="BidPrice" placeholder="Enter Maximum budget price" name="BidPrice">
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <div class="spacer5"> </div>
+                                <br>
+
+                                <p class="HeaderMeW">Please note, for roadfreight prices it can take several hours for hauliers to locate space
+                                    on their vehicles so the price is not an instant quotation
+                                    <br> However, we can notify you as soon as you receive a quotation from our hauliers.
+                                    <br> Please use one of the below options if you would like us to notify you as quotations
+                                    are received.
+                                </p>
+                                <br>
+                                <div class="form-control">
+                                    <label for="emailnotification">notification by email?</label>
+                                    <input type="checkbox" name="emailnotification" value="emailnotification">
+                                </div>
+
+                                <div class="form-control">
+                                    <label for="textnotification">notification by text?</label>
+                                    <input type="checkbox" name="textnotification" value="textnotification">
+                                </div>
+
+                                <div class="form-control">
+                                    <label for="desktopnotification">notification on your desktop?</label>
+                                    <input type="checkbox" name="desktopnotification" value="desktopnotification">
+                                </div>
+                                <div class="form-control">
+                                    <label for="appnotification">notification by app?</label>
+                                    <input type="checkbox" name="appnotification" value="appnotification">
+                                </div>
+                                <p></p>
+
+                                <button type="button" href="#" class="btn-primary">Proceed to next step</button>
+                        </div>
+            </div>
+        </div>
+
+        </form>
+        </form>
+    </div>
+    <div class="col-sm-2"></div>
+    </div>
+    </div>
+    <!-- javascript for date function -->
+    <script>
+        (function () {
+            'use strict';
+            var dayNamesShort = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'];
+            var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            var icon = '<svg viewBox="0 0 512 512"><polygon points="268.395,256 134.559,121.521 206.422,50 411.441,256 206.422,462 134.559,390.477 "/></svg>';
+            var root = document.getElementById('picker');
+            var dateInput = document.getElementById('date');
+            var altInput = document.getElementById('alt');
+            var doc = document.documentElement;
+
+            function format(dt) {
+                return Picker.prototype.pad(dt.getDate()) + ' ' + monthNames[dt.getMonth()].slice(0, 3) + ' ' + dt.getFullYear();
+            }
+
+            function show() {
+                root.removeAttribute('hidden');
+            }
+
+            function hide() {
+                root.setAttribute('hidden', '');
+                doc.removeEventListener('click', hide);
+            }
+
+            function onSelectHandler() {
+                var value = this.get();
+                if (value.start) {
+                    dateInput.value = value.start.Ymd();
+                    altInput.value = format(value.start);
+                    hide();
+                }
+            }
+            var picker = new Picker(root, {
+                min: new Date(dateInput.min),
+                max: new Date(dateInput.max),
+                icon: icon,
+                twoCalendars: false,
+                dayNamesShort: dayNamesShort,
+                monthNames: monthNames,
+                onSelect: onSelectHandler
+            });
+            root.parentElement.addEventListener('click', function (e) { e.stopPropagation(); });
+            dateInput.addEventListener('change', function () {
+                if (dateInput.value) {
+                    picker.select(new Date(dateInput.value));
+                } else {
+                    picker.clear();
+                }
+            });
+
+            altInput.addEventListener('focus', function () {
+                altInput.blur();
+                show();
+                doc.addEventListener('click', hide, false);
+            });
+
+        }());
+    </script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+    </body>
+
+</html>

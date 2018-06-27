@@ -16,6 +16,7 @@ app.use('/', router)
 app.use('/', express.static(path.join(__dirname, 'Public')))
 
 app.engine('html', es6Renderer)
+app.set('view engine', es6Renderer)
 
 // App access to views folder
 app.set('views', './Views')
