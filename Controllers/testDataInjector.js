@@ -1,5 +1,6 @@
 import Customers from '../models/CustomersModel'
 import Bookings from '../models/BookingsModel'
+import Addresses from '../models/AddressesModel'
 
 function injectCustomer () {
   // This populates an empty DB with Admins if non exist.
@@ -92,4 +93,32 @@ function injectBooking () {
   })
 }
 
-export default { injectCustomer, injectHaulier, injectQuote, injectBooking }
+function injectAddress () {
+  Addresses.find({}, function (err, addressesExist) {
+    if (err) {
+      console.log(err)
+    }
+    if (!addressesExist.length) {
+      var data = []
+      data.push({
+        AdrsID: 11111111111,
+        CusID: 11111111111,
+        AdrsFullName: 'Mr Ash Tray',
+        AdrsLine_1: '13 Ciggy Wiggy Drive',
+        CityTown: 'MudPie',
+        CountyState: 'Mississippie',
+        Country: 'USA',
+        PostZipCode: 'MS01 1PIE'
+      })
+      Addresses.create(data, function (err) {
+        if (err == null) {
+          console.log('Address Saved')
+        } else {
+          console.log(err)
+        }
+      })
+    }
+  })
+}
+
+export default { injectCustomer, injectHaulier, injectQuote, injectBooking, injectAddress }
