@@ -12,7 +12,6 @@ const enquiriesSchema = new Schema({
   enquiryID: { type: Number, min: 10000000000, max: 99999999999, required: true },
   cusID: { type: Number, min: 10000000000, max: 99999999999, required: true },
   cusHandlersName: { type: String, max: 20 },
-  dateCreated: { type: Date, default: Date.now, required: true },
   trialerType: { type: String, max: 10, required: true },
   grossWeightKg: { type: Number, max: 1000000000, required: true },
   equipmentRequired: { type: String, max: 50 },
@@ -25,6 +24,9 @@ const enquiriesSchema = new Schema({
   autoAccept: { type: Boolean, default: false },
   acceptPrice: { type: Number },
   deleteScheduled: { type: Date, required: true }
+
+}, {
+  timestamps: { timestamps: true }
 })
 
 // Allows Datatables to access Customers data

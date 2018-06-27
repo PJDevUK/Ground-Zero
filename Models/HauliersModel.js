@@ -16,8 +16,10 @@ const hauliersSchema = new Schema({
   adrsID: { type: Number, min: 10000000000, max: 99999999999 },
   companyName: { type: String, max: 50, required: true },
   email: { type: Email, required: true },
-  contactLandline: { type: Number },
-  dateCreated: { type: Date, default: Date.now }
+  contactLandline: { type: Number }
+
+}, {
+  timestamps: { timestamps: true }
 })
 
 // Allows Datatables to access Addresses data

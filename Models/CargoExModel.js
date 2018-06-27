@@ -22,6 +22,9 @@ const cargoExSchema = new Schema({
   contactNum: { type: Number, max: 14, min: 11, required: true },
   contactEmail: { type: Email, required: true },
   vatNum: { type: String, max: 25, required: true }
+
+}, {
+  timestamps: { timestamps: true }
 })
 
 // Allows Datatables to access cargoEx data

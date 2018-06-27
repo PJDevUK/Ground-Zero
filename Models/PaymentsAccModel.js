@@ -16,6 +16,8 @@ const paymentAccountSchema = new Schema({
   sortCode: { type: Number, max: 999999, min: 9999, required: true },
   accountNumber: { type: Number, max: 11, min: 11, required: true }
 
+}, {
+  timestamps: { timestamps: true }
 })
 
 // Allows Datatables to access Payments acc data
