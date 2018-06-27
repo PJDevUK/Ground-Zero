@@ -8,12 +8,12 @@ const Schema = mongoose.Schema
   */
 const paymentAccountSchema = new Schema({
 
-  paymentAccountID: { type: Number, min: 11, max: 11, required: true },
+  paymentAccountID: { type: Number, min: 10000000000, max: 99999999999, required: true },
   paymentDescription: { type: String, max: 100 },
   currencyCode: { type: String, min: 3, max: 3, required: true },
   BIC: { type: String, max: 15, required: true },
   IBAN: { type: String, max: 30, required: true },
-  sortCode: { type: Number, max: 6, min: 6, required: true },
+  sortCode: { type: Number, max: 999999, min: 9999, required: true },
   accountNumber: { type: Number, max: 11, min: 11, required: true }
 
 })

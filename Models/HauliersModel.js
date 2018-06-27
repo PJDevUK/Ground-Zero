@@ -12,8 +12,8 @@ const Schema = mongoose.Schema
   */
 const hauliersSchema = new Schema({
 
-  haulierID: { type: Number, min: 11, max: 11, required: true },
-  adrsID: { type: Number, min: 11, max: 11 },
+  haulierID: { type: Number, min: 10000000000, max: 99999999999, required: true },
+  adrsID: { type: Number, min: 10000000000, max: 99999999999 },
   companyName: { type: String, max: 50, required: true },
   email: { type: Email, required: true },
   contactLandline: { type: Number },

@@ -33,12 +33,12 @@ const Schema = mongoose.Schema
   */
 const invoicesSchema = new Schema({
 
-  invoiceID: { type: Number, min: 11, max: 11, required: true },
-  enquiryID: { type: Number, min: 11, max: 11, required: true },
-  bookingID: { type: Number, min: 11, max: 11, required: true },
-  haulierID: { type: Number, min: 11, max: 11, required: true },
-  cusID: { type: Number, min: 11, max: 11, required: true },
-  quoteID: { type: Number, min: 11, max: 11, required: true },
+  invoiceID: { type: Number, min: 10000000000, max: 99999999999, required: true },
+  enquiryID: { type: Number, min: 10000000000, max: 99999999999, required: true },
+  bookingID: { type: Number, min: 10000000000, max: 99999999999, required: true },
+  haulierID: { type: Number, min: 10000000000, max: 99999999999, required: true },
+  cusID: { type: Number, min: 10000000000, max: 99999999999, required: true },
+  quoteID: { type: Number, min: 10000000000, max: 99999999999, required: true },
 
   hauliersOwnRef: { type: String, max: 30, required: true },
   hauliersHandlersName: { type: String, max: 20, required: true },
@@ -53,16 +53,16 @@ const invoicesSchema = new Schema({
   additionalNotes: { type: String, max: 500 },
 
   collectionDate: { type: Date },
-  collectAdrsID: { type: Number, min: 15, max: 15, required: true },
+  collectAdrsID: { type: Number, min: 10000000000, max: 99999999999, required: true },
   collectionContact: { type: String, max: 70 },
   collectionInstructions: { type: String, max: 200 },
 
   deliveryDate: { type: Date },
-  deliveryAdrsID: { type: Number, min: 15, max: 15, required: true },
+  deliveryAdrsID: { type: Number, min: 10000000000, max: 99999999999, required: true },
   deliveryContact: { type: String, max: 70 },
   deliveryInstructions: { type: String, max: 200 },
 
-  quotedRate: { type: Number },
+  quotedRate: { type: Number, required: true },
   vatFee: { type: Number, required: true },
   adminFee: { type: Number, required: true },
   totRate: { type: Number, required: true },

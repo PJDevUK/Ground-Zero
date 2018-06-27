@@ -16,7 +16,8 @@ const Schema = mongoose.Schema
   */
 const customersSchema = new Schema({
 
-  cusID: { type: Number, required: true },
+  cusID: { type: Number, min: 10000000000, max: 99999999999, required: true },
+  invoiceAdrsID: { type: Number, min: 10000000000, max: 99999999999, required: true },
   companyName: { type: String, max: 50 },
   title: { type: String, max: 10, required: true },
   firstName: { type: String, max: 25, required: true },
@@ -28,7 +29,8 @@ const customersSchema = new Schema({
   postZipCode: { type: String, required: true },
   mobileNotifications: { type: String, required: true },
   dateCreated: { type: String, required: true },
-  invoiceAdrsID: { type: Number, required: true }
+  timestamps: { createdAt: 'created_at' }
+
 })
 
 // Allows Datatables to access Customers data

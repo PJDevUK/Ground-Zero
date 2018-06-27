@@ -12,8 +12,8 @@ const Schema = mongoose.Schema
   */
 const addressesSchema = new Schema({
 
-  AdrsID: { type: Number, min: 15, max: 15, required: true },
-  CusID: { type: Number, min: 11, max: 11, required: true },
+  AdrsID: { type: Number, min: 10000000000, max: 99999999999, required: true },
+  CusID: { type: Number, min: 10000000000, max: 99999999999, required: true },
   AdrsFullName: { type: String, max: 30, required: true },
   AdrsLine_1: { type: String, max: 40 },
   AdrsLine_2: { type: String, max: 40 },
