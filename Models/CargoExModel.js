@@ -31,6 +31,6 @@ const cargoExSchema = new Schema({
 cargoExSchema.plugin(dataTables)
 
 // Creates the Mongoose model
-const CargoEx = mongoose.model('CargoExModel', cargoExSchema)
+const CargoEx = mongoose.model('CargoEx', cargoExSchema)
 
 export default CargoEx

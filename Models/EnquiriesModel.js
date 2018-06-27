@@ -33,7 +33,7 @@ const enquiriesSchema = new Schema({
 enquiriesSchema.plugin(dataTables)
 
 // Creates the Mongoose model
-const Enquiries = mongoose.model('EnquiriesModel', enquiriesSchema)
+const Enquiries = mongoose.model('Enquiries', enquiriesSchema)
 
 // This exports the model.
 export default Enquiries

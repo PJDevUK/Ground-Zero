@@ -83,7 +83,7 @@ const bookingsSchema = new Schema({
 bookingsSchema.plugin(dataTables)
 
 // Creates the Mongoose model
-const Bookings = mongoose.model('BookingsModel', bookingsSchema)
+const Bookings = mongoose.model('Bookings', bookingsSchema)
 
 // This exports the model.
 export default Bookings
