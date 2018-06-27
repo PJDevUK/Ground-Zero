@@ -4,12 +4,12 @@ import Customers from '../models/CustomersModel.js'
 const router = express.Router()
 
 /* DIRECTS TO HOME PAGE */
-router.get('/', function (req, res) {
-  res.render('index.html')
+router.get('/', function (res) {
+  res.render('home.html')
 })
 
 /* GET ALL CUSTOMERS */
-router.get('/listcustomers', function (req, res, next) {
+router.get('/listcustomers', function (res, next) {
   Customers.find(function (err, getAll) {
     if (err) return next(err)
 
