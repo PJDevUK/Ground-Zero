@@ -18,8 +18,8 @@ const cargoExSchema = new Schema({
   companyID: { type: Number, min: 10000000000, max: 99999999999, required: true },
   companyName: { type: String, max: 25, required: true },
   companyAdrsID: { type: Number, min: 10000000000, max: 99999999999, required: true },
-  registrationNum: { type: Number, max: 15, required: true },
-  contactNum: { type: Number, max: 14, min: 11, required: true },
+  registrationNum: { type: Number, max: 999999999999999, required: true },
+  contactNum: { type: Number, max: 99999999999999, required: true },
   contactEmail: { type: Email, required: true },
   vatNum: { type: String, max: 25, required: true }
 
@@ -31,6 +31,6 @@ const cargoExSchema = new Schema({
 cargoExSchema.plugin(dataTables)
 
 // Creates the Mongoose model
-const CargoEx = mongoose.model('CargoEx', cargoExSchema)
+const CargoEx = mongoose.model('CompanyOwners', cargoExSchema)
 
 export default CargoEx
