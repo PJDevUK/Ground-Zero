@@ -79,7 +79,7 @@ const invoicesSchema = new Schema({
 invoicesSchema.plugin(dataTables)
 
 // Creates the Mongoose model
-const Invoices = mongoose.model('InvoicesModel', invoicesSchema)
+const Invoices = mongoose.model('Invoices', invoicesSchema)
 
 // This exports the model.
 export default Invoices

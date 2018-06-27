@@ -29,7 +29,7 @@ const quotesSchema = new Schema({
 quotesSchema.plugin(dataTables)
 
 // Creates the Mongoose model
-const Quotes = mongoose.model('QuotesModel', quotesSchema)
+const Quotes = mongoose.model('Quotes', quotesSchema)
 
 // This exports the model.
 export default Quotes

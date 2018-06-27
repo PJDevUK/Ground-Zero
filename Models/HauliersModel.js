@@ -26,7 +26,7 @@ const hauliersSchema = new Schema({
 hauliersSchema.plugin(dataTables)
 
 // Creates the Mongoose model
-const Hauliers = mongoose.model('HauliersModel', hauliersSchema)
+const Hauliers = mongoose.model('Hauliers', hauliersSchema)
 
 // This exports the model.
 export default Hauliers

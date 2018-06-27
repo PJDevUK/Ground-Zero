@@ -24,7 +24,7 @@ const paymentAccountSchema = new Schema({
 paymentAccountSchema.plugin(dataTables)
 
 // Creates the Mongoose model
-const PaymentsAcc = mongoose.model('PaymentAccModel', paymentAccountSchema)
+const PaymentsAcc = mongoose.model('PaymentAcc', paymentAccountSchema)
 
 // This exports the model.
 export default PaymentsAcc
