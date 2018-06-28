@@ -7,7 +7,7 @@ import bodyParser from 'body-parser'
 import path from 'path'
 import db from 'mongoose'
 import config from './config'
-import router from './routers/customers'
+import router from './routes/customers'
 import populateEmptyDB from './controllers/testDataInjector'
 
 var app = express()
