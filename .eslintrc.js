@@ -1,5 +1,5 @@
-export default {
-    'extends': 'standard',
+module.exports = {
+  'extends': 'standard',
   'plugins': [
     'standard',
     'promise'
