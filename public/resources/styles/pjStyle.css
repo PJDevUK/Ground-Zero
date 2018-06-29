@@ -1,0 +1,32 @@
+.product-holder {
+    position: relative;
+    display: block;
+}
+
+.plus-image {
+    left: 3%;
+    top: 10%;
+    position: absolute;
+    margin-top: -25px;
+    margin-left: -25px;
+}
+
+.plus-image2 {
+    left: 4%;
+    top: 18%;
+    position: absolute;
+    margin-top: 0%;
+    margin-left: 0%;
+}
+
+.plus-rounded-rectangle {
+    right: 1%;
+    left: 20%;
+    top: 20%;
+    position: absolute;
+    margin-right: 0%;
+}
+
+.spacer5 {
+    height: 5px;
+}
