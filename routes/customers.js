@@ -5,7 +5,7 @@ const router = express.Router()
 
 /* DIRECTS TO HOME PAGE */
 router.get('/', function (res) {
-  res.render('home.html')
+  res.render('home')
 })
 
 /* GET ALL CUSTOMERS */
